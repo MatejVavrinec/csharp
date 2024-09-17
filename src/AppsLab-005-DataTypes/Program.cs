@@ -3,7 +3,7 @@ int age = 16;
 string name = "Matej";
 char inicialky = 'M';
 bool isAdult = false;
-float accountBalance = 20.50f;
+float accountBalance = 21.50f;
 DateTime dateTime = DateTime.Now;
 
 Console.WriteLine(name);
