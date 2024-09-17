@@ -15,6 +15,5 @@ string? jedlo = Console.ReadLine();
 Console.WriteLine($"Hmmm, " + jedlo + " znie skvele!");
 
 
-Console.WriteLine("Volam sa " + meno + ", je mi " + vek + " a moje oblubene jedlo je " + jedlo + " !");
+Console.WriteLine("Volam sa " + meno + ", je mi " + vek + " a moje oblubene jedlo je " + jedlo + "!");
  
-
