@@ -1,4 +1,5 @@
-﻿int age = 16;
+﻿//Vytvaranie a testovanie premennych
+int age = 16;
 string name = "Matej";
 char inicialky = 'M';
 bool isAdult = false;
