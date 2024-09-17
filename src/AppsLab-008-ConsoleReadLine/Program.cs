@@ -11,5 +11,5 @@ Console.WriteLine("Máš " + vek + " rokov.");
 
 Console.WriteLine("Ake je tvoje oblubene jedlo?");
 string? jedlo = Console.ReadLine();
-Console.WriteLine("Mas rad " + jedlo);
+Console.WriteLine("Maš rad " + jedlo);
 
