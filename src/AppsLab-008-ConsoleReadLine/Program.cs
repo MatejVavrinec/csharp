@@ -29,7 +29,7 @@ Console.WriteLine(tretieCislo - stvrteCislo);
 
 int piateCislo = 5;
 int siesteCislo = 4;
- 
+
 Console.WriteLine(piateCislo * siesteCislo);
 
 int siedmeCislo = 50;
@@ -77,14 +77,14 @@ var zadaneMeno = "Matej";
 var zadaneHeslo = "1234567";
 
 
-var porovnavanieMena = menoUzivatela == zadaneMeno;
-var porovnavanieHesiel = hesloUzivatela == zadaneHeslo;
+//var porovnavanieMena = menoUzivatela == zadaneMeno;
+//var porovnavanieHesiel = hesloUzivatela == zadaneHeslo;
+//var prijatPristup = porovnavanieMena && porovnavanieHesiel;
 
-var prijatPristup = porovnavanieMena && porovnavanieHesiel;
-
-if (prijatPristup)
+//if (prijatPristup)
+if (menoUzivatela == zadaneMeno && hesloUzivatela == zadaneHeslo)
 {
-    Console.WriteLine("Heslo sa zhoduje, vitaj " + menoUzivatela == zadaneMeno);
+    Console.WriteLine("Heslo sa zhoduje, vitaj " + menoUzivatela);
 }
 else
 {
