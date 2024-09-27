@@ -10,7 +10,7 @@ public class Calculator
     /// </summary>
     public int Add(int a, int b)
     {
-        throw new NotImplementedException();
+        return a + b;
     }
 
     /// <summary>
@@ -18,7 +18,7 @@ public class Calculator
     /// </summary>
     public int Subtract(int a, int b)
     {
-        throw new NotImplementedException();
+        return a - b;
     }
 
     /// <summary>
@@ -26,7 +26,7 @@ public class Calculator
     /// </summary>
     public int Multiply(int a, int b)
     {
-        throw new NotImplementedException();
+        return a * b;
     }
 
     /// <summary>
@@ -34,7 +34,7 @@ public class Calculator
     /// </summary>
     public double Divide(int a, int b)
     {
-        throw new NotImplementedException();
+        return (double)a / (double)b;
     }
 
     /// <summary>
@@ -42,7 +42,7 @@ public class Calculator
     /// </summary>
     public int Remainder(int a, int b)
     {
-        throw new NotImplementedException();
+        return a % b;
     }
 
     /// <summary>
@@ -50,7 +50,7 @@ public class Calculator
     /// </summary>
     public bool AreEqual(int a, int b)
     {
-        throw new NotImplementedException();
+        return ((a == b) || (a == b)); 
     }
 
     /// <summary>
@@ -58,7 +58,7 @@ public class Calculator
     /// </summary>
     public bool AreNotEqual(int a, int b)
     {
-        throw new NotImplementedException();
+        return 
     }
 
     /// <summary>
