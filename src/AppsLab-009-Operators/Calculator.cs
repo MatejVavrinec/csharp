@@ -58,7 +58,7 @@ public class Calculator
     /// </summary>
     public bool AreNotEqual(int a, int b)
     {
-        return 
+        return (a != b);
     }
 
     /// <summary>
@@ -66,7 +66,7 @@ public class Calculator
     /// </summary>
     public bool IsGreater(int a, int b)
     {
-        throw new NotImplementedException();
+        return ( a > b );
     }
 
     /// <summary>
@@ -74,7 +74,7 @@ public class Calculator
     /// </summary>
     public bool IsLesser(int a, int b)
     {
-        throw new NotImplementedException();
+        return (a < b);
     }
 
     /// <summary>
@@ -82,7 +82,7 @@ public class Calculator
     /// </summary>
     public bool IsGreaterOrEqual(int a, int b)
     {
-        throw new NotImplementedException();
+        return (a >= b);
     }
 
     /// <summary>
@@ -90,6 +90,6 @@ public class Calculator
     /// </summary>
     public bool IsLesserOrEqual(int a, int b)
     {
-        throw new NotImplementedException();
+        return (a <= b);
     }
 }
