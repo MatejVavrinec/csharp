@@ -13,8 +13,32 @@ public class GameRules
     /// <returns>True if the player can enter the game, false otherwise.</returns>
     public bool CanPlayerEnterGame(string playerName, int playerAge)
     {
-        throw new NotImplementedException();
+        /* if (playerAge <= 15) { 
+
+             return false;
+             }
+
+         if (playerName == "")
+         {
+             return false;
+         }
+
+         if (playerName == null)
+         {
+             return false;
+         }   
+
+         return true;
+        */
+
+        if (playerAge <= 15 || playerName == null || playerName == "")
+        {
+            return false;
+        }
+        return true;
+
     }
+      
 
     /// <summary>
     /// Determines whether the game is over based on the player's health.
