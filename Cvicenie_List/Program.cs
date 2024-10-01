@@ -30,7 +30,7 @@ namespace Cvicenie_List
             listwords.Add("ako");
             listwords.Add("bolo");
             listwords.Add("vcera");
-            listwords.Add("vecer"); 
+            listwords.Add("pocasie"); 
             Console.WriteLine(listwords[0]);
             Console.WriteLine(listwords[1]);
             Console.WriteLine(listwords[2]);
