@@ -16,7 +16,7 @@ namespace Aplikacia
             while (true)
             {
 
-                Console.WriteLine("\nZadajte meno");
+                Console.WriteLine("\nZadajte meno:");
                 string meno = Console.ReadLine();
                 Console.Clear();
                 if (meno == "quit")
