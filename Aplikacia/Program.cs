@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Aplikacia
 {
@@ -10,21 +12,45 @@ namespace Aplikacia
     {
         static void Main(string[] args)
         {
-            
-            Console.WriteLine("Zadajte meno");
-            string meno = Console.ReadLine();
-
-            string[] names = {meno};
-            foreach (string name in names)
+            List<string> listOfNames = new List<string>();
+            while (true)
             {
-                Console.WriteLine("Zoznam mien");
+
+                Console.WriteLine("\nZadajte meno");
+                string meno = Console.ReadLine();
+                Console.Clear();
+                if (meno == "quit")
+                {
+                    break;
+                }
+                else
+                {
+                    listOfNames.Add(meno);
+                }
+                Console.WriteLine("Vsetky mena na zozname:");
+                foreach (string name in listOfNames)
+                {
+                    Console.WriteLine(name);
+                }
             }
 
 
 
-            
 
-            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         }
