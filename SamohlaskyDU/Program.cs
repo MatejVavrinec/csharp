@@ -23,7 +23,7 @@ namespace SamohlaskyDU
         static int SpocitajSamohlasky(string veta)
         {
             int pocet = 0;
-            char[] samohlasky = { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'}; 
+            char[] samohlasky = { 'a', 'e', 'i', 'o', 'u', }; 
 
             foreach (char znak in veta.ToLower())
             {
