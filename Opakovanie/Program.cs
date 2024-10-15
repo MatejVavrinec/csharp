@@ -75,7 +75,7 @@ namespace Opakovanie
             }
             else
             {
-                var splittedItem = foundedItem.Split("||");
+                var splittedItem = foundedItem.Split();
                 var foundedItemName = splittedItem[0];
                 var foundedItemCount = int.Parse(splittedItem[1]);
                 var newItemCount = foundedItemCount + itemCount;
