@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace MestoaObcan
 {
-    internal class Class1
+    internal class Ucitel
     {
+        string menoucitela = "Martin";
+        int vekucitela = 75;
+
+        public void VypisInfo()
+        {
+            Console.WriteLine($"Meno: {menoucitela}, Vek: {vekucitela}, uci studentov");
+        }
+
+
     }
 }

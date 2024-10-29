@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace MestoaObcan
 {
-    internal class Class2
+    internal class Mechanik
     {
+        string menomechanika = "Jakub";
+        int vekmechanika = 46;
+        
+
+        public void VypisInfo()
+        {
+            Console.WriteLine($"Meno: {menomechanika}, Vek: {vekmechanika}, opravuje auta");
+        }
+
+
+
+
     }
 }

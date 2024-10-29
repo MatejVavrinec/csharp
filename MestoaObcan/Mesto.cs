@@ -19,15 +19,17 @@ namespace MestoaObcan
 
         }
 
+        
+
 
         public void PridajObcana(Obcan obcan)
         {
             obcania.Add(obcan);
         }
 
-        public void VypisObčanov()
+        public void VypisObcanov()
         {
-            Console.WriteLine($"Občania mesta {nazov}:");
+            Console.WriteLine($"Obcania mesta {nazov}:");
             foreach (var obcan in obcania)
             {
                 obcan.VypisInfo();

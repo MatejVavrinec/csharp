@@ -17,8 +17,8 @@
             mesto2.PridajObcana(new Obcan("Anabela", 13));
             mesto2.PridajObcana(new Obcan("Jakub", 86));
 
-            mesto1.VypisObčanov();
-            mesto2.VypisObčanov();
+            mesto1.VypisObcanov();
+            mesto2.VypisObcanov();
 
 
 
