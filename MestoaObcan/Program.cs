@@ -9,7 +9,7 @@
 
 
             Lekar lek = new Lekar("Igor", 34);
-            Mechanik mech = new Mechanik("Anna", 28 "C#");
+            Mechanik mech = new Mechanik("Anna", 28);
             
             
             
