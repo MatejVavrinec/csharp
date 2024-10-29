@@ -22,7 +22,13 @@ namespace MestoaObcan
 
         public void VypisInfo()
         {
-            Console.WriteLine($"Meno: {meno}, Vek: {vek}");
+            Console.WriteLine($"Meno: {meno}");
+        }
+        public void VypisVek()
+        {
+            Console.WriteLine("vek:"+ vek);
+
+
         }
 
     }

@@ -10,7 +10,7 @@ namespace MestoaObcan
     public class Mesto
     {
         public string nazov { get; set; }
-        public List <Obcan> obcania { get; set; }
+        public List <Obcan> obcania = new List<Obcan>();
 
         public Mesto(string nazov)
         {
@@ -18,10 +18,7 @@ namespace MestoaObcan
             obcania = new List<Obcan>();
 
         }
-
-        
-
-
+                
         public void PridajObcana(Obcan obcan)
         {
             obcania.Add(obcan);

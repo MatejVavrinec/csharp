@@ -6,19 +6,13 @@ using System.Threading.Tasks;
 
 namespace MestoaObcan
 {
-    internal class Lekar
+    public class Lekar : Obcan
     {
-        public string menolekara { get; set; }
-        public int veklekara { get; set; }
-
-        public Lekar(string meno, int vek)
-        {
-            this.menolekara = meno;
-            this.veklekara = vek;
-        }
+        public Lekar(string meno, int vek) : base (meno, vek) { }
+        
         public void VypisInfo()
         {
-            Console.WriteLine($"Meno: {menolekara}, Vek: {veklekara} , lieci ludi");
+            Console.WriteLine(meno + ", " + vek + " rokov, lieci ludi");
         }
 
 

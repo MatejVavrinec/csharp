@@ -6,20 +6,19 @@ using System.Threading.Tasks;
 
 namespace MestoaObcan
 {
-    internal class Mechanik
+    public class Mechanik : Obcan
     {
-        public string menomechanika { get; set; }
-        public int vekmechanika { get; set; }
-
-        public Mechanik(string meno, int vek)
+        public string typvozidla;
+        public Mechanik(string meno, int vek,string typvozidla) : base(meno, vek)
         {
-            this.menomechanika = meno;
-            this.vekmechanika = vek;
+            this.typvozidla = typvozidla;
         }
 
-        public void VypisInfo()
+
+
+            public new void VypisInfo()
         {
-            Console.WriteLine($"Meno: {menomechanika}, Vek: {vekmechanika}, opravuje auta");
+            Console.WriteLine(meno + ", " + vek + " rokov, opravuje vozidla typu:" + typvozidla);
         }
 
 
