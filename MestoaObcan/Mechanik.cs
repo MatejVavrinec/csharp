@@ -8,9 +8,14 @@ namespace MestoaObcan
 {
     internal class Mechanik
     {
-        string menomechanika = "Jakub";
-        int vekmechanika = 46;
-        
+        public string menomechanika { get; set; }
+        public int vekmechanika { get; set; }
+
+        public Mechanik(string meno, int vek)
+        {
+            this.menomechanika = meno;
+            this.vekmechanika = vek;
+        }
 
         public void VypisInfo()
         {

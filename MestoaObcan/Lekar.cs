@@ -8,9 +8,14 @@ namespace MestoaObcan
 {
     internal class Lekar
     {
-        string menolekara = "Matej";
-        int veklekara = 34;
-        
+        public string menolekara { get; set; }
+        public int veklekara { get; set; }
+
+        public Lekar(string meno, int vek)
+        {
+            this.menolekara = meno;
+            this.veklekara = vek;
+        }
         public void VypisInfo()
         {
             Console.WriteLine($"Meno: {menolekara}, Vek: {veklekara} , lieci ludi");

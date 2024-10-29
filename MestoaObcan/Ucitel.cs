@@ -8,9 +8,14 @@ namespace MestoaObcan
 {
     internal class Ucitel
     {
-        string menoucitela = "Martin";
-        int vekucitela = 75;
+        public string menoucitela { get; set; }
+        public int vekucitela { get; set; }
 
+        public Ucitel(string meno, int vek)
+        {
+            this.menoucitela = meno;
+            this.vekucitela = vek;
+        }
         public void VypisInfo()
         {
             Console.WriteLine($"Meno: {menoucitela}, Vek: {vekucitela}, uci studentov");
