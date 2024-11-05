@@ -1,43 +1,58 @@
 ﻿namespace MestoaObcan
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
 
             Mesto bratislava = new Mesto("Bratislava");
+                        
+            
+
+            while (bratislava.obcania.Count<31)
+            {
+                Obcan o = GeneratorObcanov.GenerujObcana();
+
+                bratislava.PridajObcana(o);
+            }
+
+            while (bratislava.mechanici.Count < 5)
+            {
+                Mechanik m = GeneratorMechanikov.GenerujMechanika();
+
+                bratislava.PridajMechanika(m);
+            }
 
 
-            Lekar lek = new Lekar("Igor", 34);
-            Mechanik mech = new Mechanik("Anna", 28);
+
+           
+            bratislava.VypisObcanov();
+            bratislava.VypisMechanikov();
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             /*Mesto mesto1 = new Mesto("Bratislava");
             Mesto mesto2 = new Mesto("Zilina");
             Mesto2 mesto3 = new Mesto2("Nitra");

@@ -11,11 +11,14 @@ namespace MestoaObcan
     {
         public string nazov { get; set; }
         public List <Obcan> obcania = new List<Obcan>();
+        
 
         public Mesto(string nazov)
         {
             this.nazov = nazov;
             obcania = new List<Obcan>();
+            
+
 
         }
                 
@@ -23,6 +26,9 @@ namespace MestoaObcan
         {
             obcania.Add(obcan);
         }
+       
+
+       
 
         public void VypisObcanov()
         {
