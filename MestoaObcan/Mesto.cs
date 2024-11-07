@@ -11,13 +11,13 @@ namespace MestoaObcan
     {
         public string nazov { get; set; }
         public List <Obcan> obcania = new List<Obcan>();
-        
+        public List<Mechanik> mechanici = new List<Mechanik>();
 
         public Mesto(string nazov)
         {
             this.nazov = nazov;
             obcania = new List<Obcan>();
-            
+            mechanici = new List<Mechanik>();
 
 
         }
@@ -26,9 +26,19 @@ namespace MestoaObcan
         {
             obcania.Add(obcan);
         }
-       
+        public void PridajMechanika(Mechanik mechanik)
+        {
+            obcania.Add(mechanik);
+        }
 
-       
+        public void VypisMechanikov()
+        {
+            Console.WriteLine($"Mechanici mesta {nazov}:");
+            foreach (var mechanik in mechanici)
+            {
+                mechanik.VypisInfo();
+            }
+        }
 
         public void VypisObcanov()
         {
