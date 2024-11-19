@@ -9,7 +9,7 @@ namespace MestoaObcan
     internal class Mesto2
     {
 
-        public string nazov { get; set; }
+        protected string nazov { get; set; }
         public List<Mechanik> mechanici { get; set; }
         public List<Ucitel> ucitelia { get; set; }
         public List<Lekar> lekari { get; set; }

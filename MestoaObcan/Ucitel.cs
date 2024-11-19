@@ -8,8 +8,8 @@ namespace MestoaObcan
 {
     internal class Ucitel
     {
-        public string menoucitela { get; set; }
-        public int vekucitela { get; set; }
+        private string menoucitela { get; set; }
+        private int vekucitela { get; set; }
 
         public Ucitel(string meno, int vek)
         {

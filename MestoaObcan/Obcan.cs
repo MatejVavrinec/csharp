@@ -10,9 +10,9 @@ namespace MestoaObcan
 {
     public class Obcan
     {
-
-        public string meno { get; set; }
-        public int vek { get; set; }
+        
+        protected string meno { get; set; }
+        protected int vek { get; set; }
 
         public Obcan(string meno, int vek)
         {

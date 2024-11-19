@@ -9,7 +9,7 @@ namespace MestoaObcan
 {
     public class Mechanik : Obcan
     {
-        public string typvozidla { get; set; }
+        protected string typvozidla { get; set; }
        
         public Mechanik(string meno, int vek,string typvozidla) : base(meno, vek)
         {

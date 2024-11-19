@@ -8,7 +8,7 @@ namespace MestoaObcan
 {
     public class SeniorMechanik : Mechanik
     {
-        public int pocetProjektov;
+        protected int pocetProjektov;
         public SeniorMechanik(string meno, int vek, string typvozidla, int pocetProjektov) : base(meno, vek, typvozidla)
         {
             this.pocetProjektov = pocetProjektov;

@@ -28,7 +28,7 @@ namespace MestoaObcan
         }
         public void PridajMechanika(Mechanik mechanik)
         {
-            obcania.Add(mechanik);
+            mechanici.Add(mechanik);
         }
 
         public void VypisMechanikov()
