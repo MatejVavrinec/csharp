@@ -16,7 +16,7 @@ namespace MestoaObcan
 
         public new void VypisInfo()
         {
-            Console.WriteLine(meno + ", " + vek + "opravuje" + typvozidla + " a ma " + pocetProjektov + "projektov");
+            Console.WriteLine(meno + ", " + vek + "opravuje" + typvozidla + " a ma " + pocetProjektov + "projektov" + stav);
         }
     }
 }

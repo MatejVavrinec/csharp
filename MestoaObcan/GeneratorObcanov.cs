@@ -17,6 +17,12 @@ namespace MestoaObcan
             string meno = mena[pozicia];
             int vek = r.Next(15, 115);
             Obcan obcan = new Obcan(meno, vek);
+            int dlzkaenum = (Enum.GetValues<StavObcana>().Length);
+            int nahodnyIndex = r.Next(dlzkaenum);
+            obcan.Stav = (StavObcana)nahodnyIndex;
+
+            //obcan.Stav = StavObcana.Cudzinec;
+
             return obcan;
         }
 

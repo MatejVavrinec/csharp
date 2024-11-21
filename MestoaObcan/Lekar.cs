@@ -12,7 +12,7 @@ namespace MestoaObcan
         
         public void VypisInfo()
         {
-            Console.WriteLine(meno + ", " + vek + " rokov, lieci ludi");
+            Console.WriteLine(meno + ", " + vek + " rokov, lieci ludi Stav" + stav );
         }
 
 

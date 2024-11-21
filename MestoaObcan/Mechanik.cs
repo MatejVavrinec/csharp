@@ -21,7 +21,7 @@ namespace MestoaObcan
 
             public new void VypisInfo()
         {
-            Console.WriteLine(meno + ", " + vek + " rokov, opravuje vozidla typu:" + typvozidla);
+            Console.WriteLine(meno + ", " + vek + " rokov, opravuje vozidla typu:" + typvozidla + stav);
         }
 
 

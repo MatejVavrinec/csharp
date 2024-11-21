@@ -18,7 +18,7 @@ namespace MestoaObcan
         }
         public void VypisInfo()
         {
-            Console.WriteLine($"Meno: {menoucitela}, Vek: {vekucitela}, uci studentov");
+            Console.WriteLine($"Meno: {menoucitela}, Vek: {vekucitela}, uci studentov ");
         }
 
 

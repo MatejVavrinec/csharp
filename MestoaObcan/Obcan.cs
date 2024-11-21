@@ -13,6 +13,13 @@ namespace MestoaObcan
         
         protected string meno { get; set; }
         protected int vek { get; set; }
+        protected StavObcana stav;
+
+        public StavObcana Stav
+        {
+            get { return stav; }
+            set { stav = value; }   
+        }
 
         public Obcan(string meno, int vek)
         {
@@ -20,9 +27,10 @@ namespace MestoaObcan
             this.vek = vek;
         }
 
-        public void VypisInfo()
+
+        public virtual void VypisInfo()
         {
-            Console.WriteLine($"Meno: {meno} {vek}");
+            Console.WriteLine($"Meno: {meno} {vek} Stav: {stav}");
         }
         public void VypisVek()
         {
@@ -31,6 +39,15 @@ namespace MestoaObcan
 
         }
 
+        
+     
+
+    }
+    public enum StavObcana
+    {
+        Domaci,
+        Cudzinec,
+        Turista,
     }
 
 
