@@ -45,13 +45,12 @@ namespace CvicenieVynimky
           
             
                
-            foreach (var item in InapropriateName) 
+           
+            if (InapropriateName.Contains(name)|| InapropriateName.Contains(surName)) 
             {
-               if (name == InapropriateName[1])
-                {
-                    throw new ArgumentException("Name contains Inappropriate word");
-                }  
-            }
+                throw new ArgumentException("Inappropriate Name");
+            }  
+            
             
 
 
