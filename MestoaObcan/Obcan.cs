@@ -39,8 +39,13 @@ namespace MestoaObcan
 
         }
 
-        
-     
+        public Obcan()
+        {
+            
+        }
+
+
+
 
     }
     public enum StavObcana

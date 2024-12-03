@@ -18,5 +18,9 @@ namespace MestoaObcan
         {
             Console.WriteLine(meno + ", " + vek + "opravuje" + typvozidla + " a ma " + pocetProjektov + "projektov" + stav);
         }
+        public SeniorMechanik()
+        {
+            
+        }
     }
 }

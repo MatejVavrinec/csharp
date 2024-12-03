@@ -20,7 +20,10 @@ namespace MestoaObcan
         {
             Console.WriteLine($"Meno: {menoucitela}, Vek: {vekucitela}, uci studentov ");
         }
-
+        public Ucitel()
+        {
+            
+        }
 
     }
 }

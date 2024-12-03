@@ -23,6 +23,10 @@ namespace MestoaObcan
         {
             Console.WriteLine(meno + ", " + vek + " rokov, opravuje vozidla typu:" + typvozidla + stav);
         }
+        public Mechanik()
+        {
+            
+        }
 
 
 

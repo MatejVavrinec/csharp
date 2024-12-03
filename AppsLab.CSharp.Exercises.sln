@@ -123,7 +123,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tim", "Tim\Tim.csproj", "{F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CvicenieVynimky", "CvicenieVynimky\CvicenieVynimky.csproj", "{1622C586-5E50-4F09-8C9F-2980FA82295C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpravaPočítačovHra", "OpravaPočítačovHra\OpravaPočítačovHra.csproj", "{D63238AB-64A1-484B-97FD-53227432077C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpravaPocitacovHra", "OpravaPočítačovHra\OpravaPocitacovHra.csproj", "{D63238AB-64A1-484B-97FD-53227432077C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

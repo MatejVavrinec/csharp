@@ -1,36 +1,33 @@
-﻿namespace MestoaObcan
+﻿using System.ComponentModel;
+
+namespace MestoaObcan
 {
     public class Program
     {
         static void Main(string[] args)
-        {
-
-            Mesto bratislava = new Mesto("Bratislava");
-                        
             
-
-            while (bratislava.obcania.Count<31)
+        {
+            Mesto bratislava = Mesto.NacitajZoSuboru("mesto.json");
+            
+            if (bratislava == null)
             {
-                Obcan o = GeneratorObcanov.GenerujObcana();
-
-                bratislava.PridajObcana(o);
+                bratislava =new Mesto("Bratislava");
+                for (int i = 0; i < 31; i++)
+                {
+                    Obcan o = GeneratorObcanov.GenerujObcana();
+                    bratislava.PridajObcana(o);
+                }
+                string subor = "mesto.json";
+                bratislava.UlozDoSuboru(subor);
             }
-
-            while (bratislava.mechanici.Count < 5)
-            {
-                Mechanik m = GeneratorMechanikov.GenerujMechanika();
-
-                bratislava.PridajMechanika(m);
-            }
-
-
-
-           
+                      
+                                                        
+          
             bratislava.VypisObcanov();
             bratislava.VypisMechanikov();
+
+
             
-
-
 
 
 

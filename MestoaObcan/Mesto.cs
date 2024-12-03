@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace MestoaObcan
@@ -21,7 +22,11 @@ namespace MestoaObcan
 
 
         }
-                
+        public Mesto()
+        {
+            
+        }
+
         public void PridajObcana(Obcan obcan)
         {
             obcania.Add(obcan);
@@ -47,6 +52,23 @@ namespace MestoaObcan
             {
                 obcan.VypisInfo();
             }
+        }
+
+        public void UlozDoSuboru(string nazovSuboru)
+        {
+            string json = JsonSerializer.Serialize(this);
+            File.WriteAllText(nazovSuboru, json);
+            Console.WriteLine("Data boli ulozene");
+        }
+        public static Mesto NacitajZoSuboru(string nazovSuboru)
+        {
+            if (File.Exists(nazovSuboru))
+            {
+                string json = File.ReadAllText(nazovSuboru);
+                Mesto mesto = JsonSerializer.Deserialize<Mesto>(json);
+                return mesto;
+            }
+            return null;
         }
     }
 }
