@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OpravaPocitacovHra
 {
-    internal class GPU
+    internal class GPU : Component
     {
     }
 }

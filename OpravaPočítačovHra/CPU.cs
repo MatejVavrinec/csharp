@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OpravaPocitacovHra
 {
-    internal class CPU
+    internal class CPU : Component
     {
     }
 }

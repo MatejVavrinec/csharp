@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OpravaPocitacovHra
 {
-    internal class HDD
+    internal class HDD : Component
     {
     }
 }

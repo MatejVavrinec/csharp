@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace OpravaPocitacovHra
 {
-    internal class Component
+        public class Component
     {
+        public bool Funguje { get; set; }
+        public string Stav => Funguje ? "Funkcny" : "Pokazeny";
+
+
+        public Component()
+        {
+            Random r = new Random();
+            Funguje = r.Next(2) == 0; //50 percent sanca ze bude pokazeny
+        }
     }
+    
 }
