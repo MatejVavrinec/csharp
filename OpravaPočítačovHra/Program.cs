@@ -3,12 +3,12 @@ using static System.Formats.Asn1.AsnWriter;
 
 namespace OpravaPočítačovHra
 {
-    internal class Program
+    class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Pocitac pocitac = new Pocitac();
-            int budget = 1000;
+            decimal budget = 500;
             bool gamerunning = true;
 
             
@@ -19,56 +19,96 @@ namespace OpravaPočítačovHra
                 pocitac.StavPC();
 
                 Console.WriteLine("\nCo chcete urobit");
-                PrintMenu();
+                Console.WriteLine("1.Zakupit komponent");
+                Console.WriteLine("2.Ukoncit hru");
                 var answer = Console.ReadLine();
 
                 
 
 
 
-                
+
                 switch (answer)
                 {
                     case "1":
-                       
-                        
-
-
+                        budget = KupitKomponent(pocitac, budget);
+                        break;
                     case "2":
-                        
-
-
-
-                    case "3":
-                        
-
+                        gamerunning = false;
+                        break;
                     default:
-                        {
-                            Console.WriteLine("Nespravna akcia!");
-                            break;
-                        }
-
+                        Console.WriteLine("Neplatna volba. Skus to znova.");
+                        break;
                 }
             }
 
-
-
-        
-        
-
+            Console.WriteLine("Hra skoncila. Dakujem za hranie!");
         }
-        public static void PrintMenu()
-        {
-            Thread.Sleep(3000);
-            
-            Console.WriteLine("1.Kupit CPU");
-            Console.WriteLine("2.Kupit RAM");
-            Console.WriteLine("3.Kupit GPU");
-            Console.WriteLine("4.Kupit HDD");
 
-            Console.Write("Vyberte akciu:");
+        static decimal KupitKomponent(Pocitac pocitac, decimal budget)
+        {
+            Console.WriteLine("\nAký komponent chceš kúpiť?");
+            Console.WriteLine("1. CPU (100€)");
+            Console.WriteLine("2. RAM (50€)");
+            Console.WriteLine("3. GPU (150€)");
+            Console.WriteLine("4. HDD (75€)");
+
+            string volba = Console.ReadLine();
+            Component novykomponent = null;
+            int cena = 0;
+
+            switch (volba)
+            {
+                case "1":
+                    novykomponent = new CPU();
+                    cena = 100;
+                    break;
+                case "2":
+                    novykomponent = new RAM();
+                    cena = 50;
+                    break;
+                case "3":
+                    novykomponent = new GPU();
+                    cena = 150;
+                    break;
+                case "4":
+                    novykomponent = new HDD();
+                    cena = 75;
+                    break;
+                default:
+                    Console.WriteLine("Neplatna volba.");
+                    return budget;
+            }
+
+            // Kontrola rozpočtu
+            if (budget >= cena)
+            {
+                pocitac.PridajKomponent(novykomponent);
+                budget -= cena; // Odpočítať cenu komponentu
+                Console.WriteLine($"Komponent bol uspesne zakupeny. Zostávajuci rozpocet: {budget:C}");
+            }
+            else
+            {
+                Console.WriteLine("Nemas dostatok penazi na tento komponent!");
+            }
+
+            Console.WriteLine("\nStlac Enter pre pokracovanie...");
+            Console.ReadLine();
+            return budget;
         }
     }
+
+       
 }
+
+
+
+
+
+
+
+   
+
+ 
     
     
