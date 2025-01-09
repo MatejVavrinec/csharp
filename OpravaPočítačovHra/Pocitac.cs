@@ -9,17 +9,27 @@ namespace OpravaPocitacovHra
 {
     internal class Pocitac
     {
-        public List<Component> CPUs { get; set; }
-        public List<Component> RAMs { get; set; }
-        public List<Component> GPUs { get; set; }
-        public List<Component> HDDs { get; set; }
+        public List<Component> CPUs { get; set; } = new List<Component> { };
+        public List<Component> RAMs { get; set; } = new List<Component> { };
+        public List<Component> GPUs { get; set; } = new List<Component> { };
+        public List<Component> HDDs { get; set; } = new List<Component> { };
 
         public Pocitac()
         {
-            CPUs = new List<Component> { new CPU() };
-            RAMs = new List<Component> { new RAM() };
-            GPUs = new List<Component> { new GPU() };
-            HDDs = new List<Component> { new HDD() };
+            Random r = new Random();
+
+            CPU pouziteCPU = new CPU();
+            pouziteCPU.Funguje = r.Next(2) == 0;
+            RAM pouzitaRAM = new RAM();
+            pouziteCPU.Funguje = r.Next(2) == 0;
+            GPU pouziteGPU = new GPU();
+            pouziteCPU.Funguje = r.Next(2) == 0;
+            HDD pouziteHDD = new HDD();
+            pouziteCPU.Funguje = r.Next(2) == 0;
+            CPUs.Add(pouziteCPU);
+            RAMs.Add(pouzitaRAM);
+            GPUs.Add(pouziteGPU);
+            HDDs.Add(pouziteHDD);
         }
 
         public void StavPC()

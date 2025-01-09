@@ -85,7 +85,7 @@ namespace OpravaPočítačovHra
             {
                 pocitac.PridajKomponent(novykomponent);
                 budget -= cena; // Odpočítať cenu komponentu
-                Console.WriteLine($"Komponent bol uspesne zakupeny. Zostávajuci rozpocet: {budget:C}");
+                Console.WriteLine($"Komponent bol uspesne zakupeny. Zostavajuci rozpocet: {budget:C}");
             }
             else
             {

@@ -8,14 +8,13 @@ namespace OpravaPocitacovHra
 {
         public class Component
     {
-        public bool Funguje { get; set; }
+        public bool Funguje { get; set; } = true;
         public string Stav => Funguje ? "Funkcny" : "Pokazeny";
 
 
         public Component()
         {
-            Random r = new Random();
-            Funguje = r.Next(2) == 0; //50 percent sanca ze bude pokazeny
+        
         }
     }
     
