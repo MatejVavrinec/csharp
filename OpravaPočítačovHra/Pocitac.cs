@@ -19,13 +19,13 @@ namespace OpravaPocitacovHra
             Random r = new Random();
 
             CPU pouziteCPU = new CPU();
-            pouziteCPU.Funguje = r.Next(2) == 0;
+            pouziteCPU.Funguje = r.Next(4) == 0;
             RAM pouzitaRAM = new RAM();
-            pouziteCPU.Funguje = r.Next(2) == 0;
+            pouziteCPU.Funguje = r.Next(4) == 0;
             GPU pouziteGPU = new GPU();
-            pouziteCPU.Funguje = r.Next(2) == 0;
+            pouziteCPU.Funguje = r.Next(4) == 0;
             HDD pouziteHDD = new HDD();
-            pouziteCPU.Funguje = r.Next(2) == 0;
+            pouziteCPU.Funguje = r.Next(4) == 0;
             CPUs.Add(pouziteCPU);
             RAMs.Add(pouzitaRAM);
             GPUs.Add(pouziteGPU);
@@ -57,5 +57,7 @@ namespace OpravaPocitacovHra
             else if (component is GPU) GPUs.Add(component);
             else if (component is HDD) HDDs.Add(component);
         }
+
+        
     }
 }

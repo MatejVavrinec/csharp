@@ -8,5 +8,6 @@ namespace OpravaPocitacovHra
 {
     internal class HDD : Component
     {
+
     }
 }
