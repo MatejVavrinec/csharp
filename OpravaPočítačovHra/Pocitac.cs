@@ -14,6 +14,7 @@ namespace OpravaPocitacovHra
         public List<Component> GPUs { get; set; } = new List<Component> { };
         public List<Component> HDDs { get; set; } = new List<Component> { };
 
+        
         public Pocitac()
         {
             Random r = new Random();
@@ -57,6 +58,7 @@ namespace OpravaPocitacovHra
             else if (component is GPU) GPUs.Add(component);
             else if (component is HDD) HDDs.Add(component);
         }
+        
 
         
     }

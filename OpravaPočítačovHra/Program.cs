@@ -10,6 +10,7 @@ namespace OpravaPočítačovHra
             Pocitac pocitac = new Pocitac();
             decimal budget = 500;
             bool gamerunning = true;
+            
 
             
             while (gamerunning)
@@ -20,7 +21,8 @@ namespace OpravaPočítačovHra
 
                 Console.WriteLine("\nCo chcete urobit");
                 Console.WriteLine("1.Zakupit komponent");
-                Console.WriteLine("2.Ukoncit hru");
+                Console.WriteLine("2.Vymenit komponent");
+                Console.WriteLine("3.Ukoncit hru");
                 var answer = Console.ReadLine();
 
                 
@@ -33,7 +35,12 @@ namespace OpravaPočítačovHra
                     case "1":
                         budget = KupitKomponent(pocitac, budget);
                         break;
-                    case "2":
+
+                     case "2":
+                        budget = ReplaceBrokenComponent(pocitac, budget);
+                        break;
+
+                    case "3":
                         gamerunning = false;
                         break;
                     default:
@@ -80,6 +87,7 @@ namespace OpravaPočítačovHra
                     return budget;
             }
 
+
             // Kontrola rozpočtu
             if (budget >= cena)
             {
@@ -96,10 +104,83 @@ namespace OpravaPočítačovHra
             Console.ReadLine();
             return budget;
         }
+        static decimal ReplaceBrokenComponent(Pocitac pocitac, decimal budget)
+        {
+            Console.WriteLine("\nAký typ komponentu chceš vymeniť?");
+            Console.WriteLine("1. CPU (100€)");
+            Console.WriteLine("2. RAM (50€)");
+            Console.WriteLine("3. GPU (150€)");
+            Console.WriteLine("4. HDD (75€)");
+
+            string choice = Console.ReadLine();
+            List<Component> selectedList = null;
+            decimal cost = 0;
+
+            switch (choice)
+            {
+                case "1":
+                    selectedList = pocitac.CPUs;
+                    cost = 100;
+                    break;
+                case "2":
+                    selectedList = pocitac.RAMs;
+                    cost = 50;
+                    break;
+                case "3":
+                    selectedList = pocitac.GPUs;
+                    cost = 150;
+                    break;
+                case "4":
+                    selectedList = pocitac.HDDs;
+                    cost = 75;
+                    break;
+                default:
+                    Console.WriteLine("Neplatná voľba.");
+                    return budget;
+            }
+
+            // Nájsť prvý pokazený komponent na výmenu
+            Component brokenComponent = selectedList.Find(c => !c.Funguje);
+
+            if (brokenComponent != null)
+            {
+                if (budget >= cost)
+                {
+                    selectedList[selectedList.IndexOf(brokenComponent)] = CreateNewComponent(choice);
+                    budget -= cost;
+                    Console.WriteLine($"Pokazený komponent bol úspešne nahradený. Zostávajúci rozpočet: {budget:C}");
+                }
+                else
+                {
+                    Console.WriteLine("Nemáš dostatok peňazí na tento komponent!");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Žiadny pokazený komponent tohto typu nebol nájdený.");
+            }
+
+            Console.WriteLine("\nStlač Enter pre pokračovanie...");
+            Console.ReadLine();
+            return budget;
+        }
+
+        static Component CreateNewComponent(string choice)
+        {
+            return choice switch
+            {
+                "1" => new CPU(),
+                "2" => new RAM(),
+                "3" => new GPU(),
+                "4" => new HDD(),
+                _ => null,
+            };
+        }
     }
+}
 
        
-}
+
 
 
 
