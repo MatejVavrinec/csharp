@@ -22,7 +22,7 @@ class Program
             Console.Clear();
             Console.WriteLine("              Vitajte v Opravarni Pocitacov.                                 ");
             Console.WriteLine("   _______________                        |*\\_/*|________");
-            Console.WriteLine("  |  ___________  |     .-.     .-.      ||_/-\\_|______  |\r\n");
+            Console.WriteLine("  |  ___________  |     .-.     .-.      ||_/-\\_|______  |\r");
             Console.WriteLine("  | |           | |    .****. .****.     | |           | |");
             Console.WriteLine("  | |   0   0   | |    .*****.*****.     | |   0   0   | |");
             Console.WriteLine("  | |     -     | |     .*********.      | |     -     | |");
@@ -76,11 +76,11 @@ class Program
         {
             if (!component.Funguje)
             {
-                var replacement = inventar.FirstOrDefault(c => c.GetType() == component.GetType() && c.Meno == component.Meno);
-                if (replacement != null)
+                var nahrada = inventar.FirstOrDefault(c => c.GetType() == component.GetType() && c.Meno == component.Meno);
+                if (nahrada!= null)
                 {
                     Console.WriteLine($"Nahradzam pokazeny {component.Meno} ({component.Specifikacie})...");
-                    inventar.Remove(replacement);
+                    inventar.Remove(nahrada);
                     component.Funguje = true;
                 }
                 else

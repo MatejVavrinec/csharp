@@ -19,7 +19,7 @@ namespace OpravaPocitacovProgram
         public void NovyPocitac()
         {
             Pocitac = new Pocitac();
-            Pladba = new Random().Next(500, 1000); // Náhodná odmena za opravu
+            Pladba = new Random().Next(500, 800); // Náhodná odmena za opravu
         }
 
         public void UkazSpecialnyPC()
