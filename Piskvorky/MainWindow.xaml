@@ -10,12 +10,12 @@
         <Button Name="Button_0x0" Content="" HorizontalAlignment="Left" Margin="161,43,0,0" VerticalAlignment="Top" Height="98" Width="104" Background="#FFFF07F9" Click="Button_Click"/>
         <Button x:Name="Button_0x1" Content="" HorizontalAlignment="Left" Margin="296,43,0,0" VerticalAlignment="Top" Height="98" Width="104" Background="#FFFF07F9" Click="Button_Click"/>
         <Button x:Name="Button_0x2" Content="" HorizontalAlignment="Left" Margin="429,43,0,0" VerticalAlignment="Top" Height="98" Width="104" Background="#FFFF07F9" Click="Button_Click"/>
-        <Button x:Name="Button_0x3" Content="" HorizontalAlignment="Left" Margin="161,163,0,0" VerticalAlignment="Top" Height="98" Width="104" Background="#FFFF07F9" Click="Button_Click"/>
-        <Button x:Name="Button_0x4" Content="" HorizontalAlignment="Left" Margin="296,163,0,0" VerticalAlignment="Top" Height="98" Width="104" Background="#FFFF07F9" Click="Button_Click"/>
-        <Button x:Name="Button_0x5" Content="" HorizontalAlignment="Left" Margin="429,163,0,0" VerticalAlignment="Top" Height="98" Width="104" Background="#FFFF07F9" Click="Button_Click"/>
-        <Button x:Name="Button_0x6" Content="" HorizontalAlignment="Left" Margin="161,283,0,0" VerticalAlignment="Top" Height="98" Width="104" Background="#FFFF07F9" Click="Button_Click"/>
-        <Button x:Name="Button_0x7" Content="" HorizontalAlignment="Left" Margin="296,283,0,0" VerticalAlignment="Top" Height="98" Width="104" Background="#FFFF07F9" Click="Button_Click"/>
-        <Button x:Name="Button_0x8" Content="" HorizontalAlignment="Left" Margin="429,283,0,0" VerticalAlignment="Top" Height="98" Width="104" Background="#FFFF07F9" Click="Button_Click"/>
+        <Button x:Name="Button_1x0" Content="" HorizontalAlignment="Left" Margin="161,163,0,0" VerticalAlignment="Top" Height="98" Width="104" Background="#FFFF07F9" Click="Button_Click"/>
+        <Button x:Name="Button_1x1" Content="" HorizontalAlignment="Left" Margin="296,163,0,0" VerticalAlignment="Top" Height="98" Width="104" Background="#FFFF07F9" Click="Button_Click"/>
+        <Button x:Name="Button_1x2" Content="" HorizontalAlignment="Left" Margin="429,163,0,0" VerticalAlignment="Top" Height="98" Width="104" Background="#FFFF07F9" Click="Button_Click"/>
+        <Button x:Name="Button_2x0" Content="" HorizontalAlignment="Left" Margin="161,283,0,0" VerticalAlignment="Top" Height="98" Width="104" Background="#FFFF07F9" Click="Button_Click"/>
+        <Button x:Name="Button_2x1" Content="" HorizontalAlignment="Left" Margin="296,283,0,0" VerticalAlignment="Top" Height="98" Width="104" Background="#FFFF07F9" Click="Button_Click"/>
+        <Button x:Name="Button_2x2" Content="" HorizontalAlignment="Left" Margin="429,283,0,0" VerticalAlignment="Top" Height="98" Width="104" Background="#FFFF07F9" Click="Button_Click"/>
 
     </Grid>
 </Window>

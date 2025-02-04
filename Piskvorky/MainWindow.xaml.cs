@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Diagnostics.Eventing.Reader;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -43,36 +44,137 @@ namespace Piskvorky
                 LastPlayer = PlayerOne;
             }
             var isWinner = CheckWinner();
+            
+            
             if (isWinner)
             {
-                MessageBox.Show("Vyhral hrac:" + LastPlayer);
+                var result = MessageBox.Show("Vyhral hrac:" + LastPlayer + Environment.NewLine + "Chces novu hru?",
+                    "Vyhral hrac",
+                    MessageBoxButton.YesNo,
+                    MessageBoxImage.Information);
+
+                if (result == MessageBoxResult.Yes)
+                {
+                    Button_0x0.Content = "";
+                    Button_0x1.Content = "";
+                    Button_0x2.Content = "";
+                    Button_1x0.Content = "";
+                    Button_1x1.Content = "";
+                    Button_1x2.Content = "";
+                    Button_2x0.Content = "";
+                    Button_2x1.Content = "";
+                    Button_2x2.Content = "";
+                    Button_0x0.Background = new SolidColorBrush(Colors.Pink);
+                    Button_0x1.Background = new SolidColorBrush(Colors.Pink);
+                    Button_0x2.Background = new SolidColorBrush(Colors.Pink);
+                    Button_1x0.Background = new SolidColorBrush(Colors.Pink);
+                    Button_1x1.Background = new SolidColorBrush(Colors.Pink);
+                    Button_1x2.Background = new SolidColorBrush(Colors.Pink);
+                    Button_2x0.Background = new SolidColorBrush(Colors.Pink);
+                    Button_2x1.Background = new SolidColorBrush(Colors.Pink);
+                    Button_2x2.Background = new SolidColorBrush(Colors.Pink);
+                    
+                }
+                else
+                {
+                    this.Close();
+                }
+            }
+            bool isFull = CheckFull();
+            if (isFull)
+            {
+                MessageBox.Show("Remiza");
+                this.Close();
             }
         }
+
+        private bool CheckFull()
+        {
+            var button0 = Button_0x0.Content.ToString();
+            var button1 = Button_0x1.Content.ToString();
+            var button2 = Button_0x2.Content.ToString();
+            var button3 = Button_1x0.Content.ToString();
+            var button4 = Button_1x1.Content.ToString();
+            var button5 = Button_1x2.Content.ToString();
+            var button6 = Button_2x0.Content.ToString();
+            var button7 = Button_2x1.Content.ToString();
+            var button8 = Button_2x2.Content.ToString();
+
+            if (button0 != "" && button1 != "" && button2 != ""
+                && button3 != "" && button4 != "" && button5 != "" &&
+                button6 != "" && button7 != "" && button8 != "")
+            {
+                return true;
+            }
+            return false;
+        }
+
+
+
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             ProcessClick(sender as Button);
         }
 
+
+
+       
+
         public bool CheckWinner()
         {
-            var button_0x0 = Button_0x0.Content.ToString();
-            var button_0x1 = Button_0x1.Content.ToString();
-            var button_0x2 = Button_0x2.Content.ToString();
-            var button_0x3 = Button_0x3.Content.ToString();
-            var button_0x4 = Button_0x4.Content.ToString();
-            var button_0x5 = Button_0x5.Content.ToString();
-            var button_0x6 = Button_0x6.Content.ToString();
-            var button_0x7 = Button_0x7.Content.ToString();
-            var button_0x8 = Button_0x8.Content.ToString();
+            
+            var b_0x0 = Button_0x0.Content.ToString();
+            var b_0x1 = Button_0x1.Content.ToString();
+            var b_0x2 = Button_0x2.Content.ToString();
 
-            //Kontrola prveho riadku dorobit ostatne
-            if (button_0x0 == button_0x1 && button_0x0 == button_0x2)
+            var b_1x0 = Button_1x0.Content.ToString();
+            var b_1x1 = Button_1x1.Content.ToString();
+            var b_1x2 = Button_1x2.Content.ToString();
+
+            var b_2x0 = Button_2x0.Content.ToString();
+            var b_2x1 = Button_2x1.Content.ToString();
+            var b_2x2 = Button_2x2.Content.ToString();
+
+            if (b_0x0 == b_0x1 && b_0x1 == b_0x2 && b_0x2 != "")   //kontrola prveho riadku
             {
                 return true;
             }
+            else if (b_1x0 == b_1x1 && b_1x1 == b_1x2 && b_1x2 != "") // druhy
+            {
+                return true;
+            }
+            else if (b_2x0 == b_2x1 && b_2x1 == b_2x2 && b_2x2 != "") // treti
+            {
+                return true;
+            }
+            else if (b_0x0 == b_1x1 && b_1x1 == b_2x2 && b_2x2 != "") //diagonal 1
+            {
+                return true;
+            }
+            else if (b_2x0 == b_1x1 && b_1x1 == b_0x2 && b_0x2 != "") // diagonal 2
+            {
+                return true;
+            }
+            else if (b_0x0 == b_1x0 && b_1x0 == b_2x0 && b_2x0 != "") //stlpec 1 
+            {
+                return true;
+            }
+            else if (b_0x1 == b_1x1 && b_1x1 == b_2x1 && b_2x1 != "") //stlpec 2 
+            {
+                return true;
+            }
+            else if (b_0x2 == b_1x2 && b_1x2 == b_2x2 && b_2x2 != "") // stlpec 3
+            {
+                return true;
+            }
+
             return false;
 
-
+           
         }
+         
+
+
     }
-}
+   }
