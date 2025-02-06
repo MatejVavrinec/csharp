@@ -9,16 +9,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Images\" />
+    <None Remove="Images\background.png" />
+    <None Remove="Images\Honkai-Star-Rail-Unique-Enemy-Design-PNG.png" />
+    <None Remove="Images\Seela_Honkai_star_rail_Honkailab_BG3.png" />
+    <None Remove="Windows\background.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Images\Honkai-Star-Rail-Unique-Enemy-Design-PNG.png">
+    <Resource Include="Images\background.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Images\Seela_Honkai_star_rail_Honkailab_BG3.png">
+    </Resource>
+    <Resource Include="Images\Honkai-Star-Rail-Unique-Enemy-Design-PNG.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Resource>
+    <Resource Include="Images\Seela_Honkai_star_rail_Honkailab_BG3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Windows\background.png" />
   </ItemGroup>
 
 </Project>

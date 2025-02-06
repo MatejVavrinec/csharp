@@ -11,8 +11,6 @@
             <ColumnDefinition Width="501*"/>
             <ColumnDefinition Width="299*"/>
         </Grid.ColumnDefinitions>
-        <Image Margin="0,302,106,0" Source="/Images/Seela_Honkai_star_rail_Honkailab_BG3.png" Stretch="Fill"/>
-        <Image Margin="523,0,0,215" Source="/Images/Honkai-Star-Rail-Unique-Enemy-Design-PNG.png" Stretch="Fill" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>
