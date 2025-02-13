@@ -13,8 +13,8 @@ namespace PokemoniSaBiju
 
         public GameEngine()
         {
-            FirstPokemon = new Pokemon("Pikachu", 100 );
-            SecondPokemon = new Pokemon("Charizard", 100);
+            FirstPokemon = new Pokemon("Sella", 200, 1);
+            SecondPokemon = new Pokemon("Charizard", 100, 1);
         }
 
     }

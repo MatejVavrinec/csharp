@@ -14,11 +14,19 @@
         <Image Margin="503,0,0,194" Source="/Images/Honkai-Star-Rail-Unique-Enemy-Design-PNG.png" Stretch="Fill"/>
         <Image Margin="0,163,475,129" Source="/Images/Seela_Honkai_star_rail_Honkailab_BG3.png" Stretch="Fill"/>
         <Label Name="Label_Pokemon1_HP" Content="X/X" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="181,68,0,0" VerticalAlignment="Top" Width="129"/>
-        <Button Content="Light Attack" HorizontalAlignment="Left" Margin="40,460,0,0" VerticalAlignment="Top" Height="72" Width="206" Click="Button_Click"/>
+        <Button Name="Light" Content="Light Attack" HorizontalAlignment="Left" Margin="40,460,0,0" VerticalAlignment="Top" Height="36" Width="163" Click="Button_Click" Background="#FF19EFFF"/>
         <Label Name="Label_Pokemon2_HP" Content="X/X" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="636,379,0,0" VerticalAlignment="Top" Height="24" Width="132"/>
-        <Button Content="Ultimate Attack" HorizontalAlignment="Left" Margin="558,460,0,0" VerticalAlignment="Top" Height="72" Width="229" Click="Button_Click_1"/>
-        <Button Content="Eather Attack" HorizontalAlignment="Left" Margin="287,460,0,0" VerticalAlignment="Top" Height="72" Width="226" Click="Button_Click_2"/>
+        <Button Name="Ultimate" Content="Ultimate Attack" HorizontalAlignment="Left" Margin="203,460,0,0" VerticalAlignment="Top" Height="108" Width="141" Click="Button_Click_1" Background="#FFFF9800"/>
+        <Button Name="Eather" Content="Eather Attack" HorizontalAlignment="Left" Margin="40,496,0,0" VerticalAlignment="Top" Height="72" Width="163" Click="Button_Click_2" Background="#FF9400FF"/>
         <ProgressBar Name="ProgressBar_Pokemon2_HP" HorizontalAlignment="Left" Height="30" Margin="615,349,0,0" VerticalAlignment="Top" Width="172"/>
+        <Button Name="Heal" Content="Heal" HorizontalAlignment="Left" Margin="35,435,0,0" VerticalAlignment="Top" Width="309" Click="Button_Click_4" Background="#FF22FF04"/>
+        <ListView Name="ListView_FightLogger" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="390,460,72,13" Background="#FFBD9C6B">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
 
 
     </Grid>

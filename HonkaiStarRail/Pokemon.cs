@@ -11,29 +11,32 @@ namespace PokemoniSaBiju
     public class Pokemon
     {
         public string Name { get; set; }
+        public int MaxHealth { get; set; }
 
         public int Health { get; set; }
-
-        public Pokemon(string name, int health)
+        public int Level { get; set; }
+        public Pokemon(string name, int maxHealth, int level)
         {
-            Name = name;
-            Health = health;
+            this.Name = name;
+            this.Health = 100;
+            this.Level = level;
+            this.MaxHealth = maxHealth;
         }
 
         public int Attack1()
         {
             Random rnd = new Random();
-            return rnd.Next(10, 91);
+            return rnd.Next(10, 91) * Level;
         }
         public int Attack2()
         {
             Random rnd = new Random();
-            return rnd.Next(30, 71);
+            return rnd.Next(30, 71) * Level;
         }
         public int Attack3()
         {
             Random rnd = new Random();
-            return rnd.Next(40, 60);
+            return rnd.Next(40, 60) * Level;
         }
         public bool TakeDamage(int damage)
         {
@@ -48,15 +51,18 @@ namespace PokemoniSaBiju
         public int Heal()
         {
             Random rnd = new Random();
-            int healvalue = rnd.Next(20, 70);
-            Health += healvalue;
-            if (Health > 100)
-            {
-                Health = 100;
-            } 
-            return healvalue;
-            
+            return rnd.Next(20, 71) * Level;
+
         }
-        
+        public void TakeHeal(int heal)
+        {
+            Health += heal;
+            if (Health >= MaxHealth)
+            {
+                Health = MaxHealth;
+
+            }
+
+        }
     }
 }
