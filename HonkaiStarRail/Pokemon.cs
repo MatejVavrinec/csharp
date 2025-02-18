@@ -18,7 +18,7 @@ namespace PokemoniSaBiju
         public Pokemon(string name, int maxHealth, int level)
         {
             this.Name = name;
-            this.Health = 100;
+            this.Health = 200;
             this.Level = level;
             this.MaxHealth = maxHealth;
         }
@@ -51,7 +51,7 @@ namespace PokemoniSaBiju
         public int Heal()
         {
             Random rnd = new Random();
-            return rnd.Next(20, 71) * Level;
+            return rnd.Next(50,71) * Level;
 
         }
         public void TakeHeal(int heal)
